@@ -41,11 +41,11 @@ if (n > 0) {
 
     console.log('\n Piramide \n')
 
-
+    let middle = n % 2
     for (let i = 1; i <= n; i += 1) {
         let pyramid = "";
         for (let x = 0; x < i; x += 1) {
-            leftTriange += '*'
+            
         }
         console.log(leftTriange)
     }
