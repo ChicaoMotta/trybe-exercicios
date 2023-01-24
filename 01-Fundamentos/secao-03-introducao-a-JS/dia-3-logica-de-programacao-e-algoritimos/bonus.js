@@ -125,6 +125,26 @@ if (n > 0) {
     };
 
 
+    console.log('\n Prime \n')
+
+    let primeNum = 17;
+    let isPrime = true;
+
+    for (i = 2; i < primeNum; i += 1) {
+        if (primeNum % i === 0) {
+            isPrime = false;
+            break;
+        } else {
+            isPrime = true;
+        }
+    }
+
+    if (isPrime) {
+        console.log('Numero é primo')
+    } else {
+        console.log('Numero não é primo');
+    }
+
 }
 else {
     console.log("Seu numero deve ser maior que zero!")
