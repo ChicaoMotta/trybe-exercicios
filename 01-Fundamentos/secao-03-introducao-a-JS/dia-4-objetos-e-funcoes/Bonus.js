@@ -84,3 +84,75 @@ const basket = [
     'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
     'Banana', 'Pera', 'Abacate', 'Uva',
 ];
+
+let object = {};
+
+function frutas(array) {
+    for (let i = 0; i < basket.length; i += 1) {
+        let key = basket[i];
+        let cont = 0;
+        if (key !== null) {
+            for (let a = 0; a < basket.length; a += 1) {
+                if (key === basket[a]) {
+                    cont += 1;
+                    basket[a] = null;
+                }
+            }
+            object[key] = cont;
+        }
+    }
+    return object;
+}
+
+frutas(basket)
+
+// Nao consigo acessar as keys dentro do object
+//console.log(object.Melancia )
+
+let moradores = {
+    blocoUm: [
+        {
+            nome: 'Luiza',
+            sobrenome: 'Guimarães',
+            andar: 10,
+            apartamento: 1005,
+        },
+
+        {
+            nome: 'William',
+            sobrenome: 'Albuquerque',
+            andar: 5,
+            apartamento: 502,
+        },
+    ],
+    blocoDois: [
+        {
+            nome: 'Murilo',
+            sobrenome: 'Ferraz',
+            andar: 8,
+            apartamento: 804,
+        },
+        {
+            nome: 'Zoey',
+            sobrenome: 'Brooks',
+            andar: 1,
+            apartamento: 101,
+        },
+    ],
+};
+
+
+// console.log(moradores.blocoDois[1].nome + moradores.blocoDois[1].sobrenome + moradores.blocoDois[1].andar + moradores.blocoDois[1].apartamento)
+
+for (let index = 0; index < moradores.blocoUm.length; index += 1) {
+
+    console.log(moradores.blocoUm[index].nome + ' ' + moradores.blocoUm[index].sobrenome);
+
+}
+
+
+for (let index = 0; index < moradores.blocoDois.length; index++) {
+
+    console.log(moradores.blocoDois[index].nome + ' ' + moradores.blocoDois[index].sobrenome);
+
+}
